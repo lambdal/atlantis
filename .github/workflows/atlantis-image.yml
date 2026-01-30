@@ -50,7 +50,7 @@ jobs:
       id-token: write
     strategy:
       matrix:
-        image_type: [alpine, debian]
+        image_type: [debian]
     runs-on: ubuntu-24.04
     env:
       # Determine target: staging for PRs, prod for main
@@ -176,7 +176,7 @@ jobs:
     name: Build Image
     strategy:
       matrix:
-        image_type: [alpine, debian]
+        image_type: [debian]
     runs-on: ubuntu-24.04
     steps:
       - run: 'echo "No build required"'
